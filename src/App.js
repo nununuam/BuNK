@@ -1,3 +1,4 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 //This is code below initialize the aws amplify analytics called pinpoint
@@ -25,5 +26,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
