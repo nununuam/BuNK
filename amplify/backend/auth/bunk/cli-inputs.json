@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "bunk_identitypool_15b4f7d5",
+    "allowUnauthenticatedIdentities": true,
+    "authSelections": "identityPoolOnly",
+    "resourceName": "bunk",
+    "sharedId": "15b4f7d5",
+    "serviceName": "Cognito",
+    "useDefault": "manual"
+  }
+}

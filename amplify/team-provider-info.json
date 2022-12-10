@@ -10,6 +10,17 @@
       "StackName": "amplify-bunk-bunkapp-213929",
       "StackId": "arn:aws:cloudformation:us-west-2:457370034377:stack/amplify-bunk-bunkapp-213929/04fd56c0-784d-11ed-aeee-02c5ca6ac069",
       "AmplifyAppId": "d34t7crsvp9ktw"
+    },
+    "categories": {
+      "auth": {
+        "bunk": {}
+      },
+      "api": {
+        "amplifyDatasource": {}
+      },
+      "analytics": {
+        "BunkAppPinPoint": {}
+      }
     }
   }
 }
