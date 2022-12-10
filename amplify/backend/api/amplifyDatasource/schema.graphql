@@ -1,0 +1,65 @@
+type Type @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  condo: Boolean
+  apartment: Boolean
+  house: Boolean
+  townhouse: Boolean
+}
+
+type Parking @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  price: Float
+  parkingAvailable: String
+}
+
+type Save @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  postID: ID
+  userID: ID! @index(name: "byUser")
+  OneSaveToManyPost: [Posts] @hasMany(indexName: "bySave", fields: ["id"])
+}
+
+type Content @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  type: ID
+  availableBedroom: Int!
+  bathroom: Int!
+  privateBathroom: Boolean
+  kitchen: String!
+  laundry: Boolean!
+  parking: ID!
+  contentToParking: Parking @hasOne
+  gym: String!
+  bedroom: Int!
+  OneContentToOneType: Type @hasOne
+}
+
+type Posts @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  date: AWSDateTime
+  title: String!
+  room: Int!
+  content: ID!
+  user: ID
+  saveID: ID! @index(name: "bySave")
+  userID: ID! @index(name: "byUser")
+  OnePostToOneContent: Content @hasOne
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  phone: AWSPhone!
+  email: AWSEmail!
+  postingroom: Boolean
+  findingroommate: Boolean
+  bio: String!
+  profilepicture: String!
+  posts: ID
+  save: ID
+  UserHasManySaves: [Save] @hasMany(indexName: "byUser", fields: ["id"])
+  OneUserToManyPosts: [Posts] @hasMany(indexName: "byUser", fields: ["id"])
+  ac: Boolean
+  heater: Boolean
+}
