@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+//This is code below initialize the aws amplify analytics called pinpoint
+import { Amplify, Analytics } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 function App() {
   return (
