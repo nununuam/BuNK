@@ -22,5 +22,23 @@
         "BunkAppPinPoint": {}
       }
     }
+  },
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bunk-master-155341-authRole",
+      "UnauthRoleArn": "arn:aws:iam::457370034377:role/amplify-bunk-master-155341-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::457370034377:role/amplify-bunk-master-155341-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-bunk-master-155341-deployment",
+      "UnauthRoleName": "amplify-bunk-master-155341-unauthRole",
+      "StackName": "amplify-bunk-master-155341",
+      "StackId": "arn:aws:cloudformation:us-west-2:457370034377:stack/amplify-bunk-master-155341/e072feb0-78e5-11ed-890b-06ed7347611f",
+      "AmplifyAppId": "d34t7crsvp9ktw"
+    },
+    "categories": {
+      "auth": {
+        "bunk": {}
+      }
+    }
   }
 }
